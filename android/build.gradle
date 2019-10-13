@@ -16,6 +16,9 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
+        flatDir {
+            dirs 'libs'
+        }
     }
 }
 
@@ -32,3 +35,8 @@ android {
         disable 'InvalidPackage'
     }
 }
+
+dependencies {
+        compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    }
